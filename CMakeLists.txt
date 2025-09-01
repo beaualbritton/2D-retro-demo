@@ -55,4 +55,5 @@ target_link_libraries(${PROJECT_NAME} glfw glm freetype)
 
 # --- Install target ---
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
-
+# --- Copy entity data into build directory ---
+file(COPY ${CMAKE_SOURCE_DIR}/src/game/entity-data DESTINATION ${CMAKE_BINARY_DIR})
